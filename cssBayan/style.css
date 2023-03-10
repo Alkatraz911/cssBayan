@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+.container_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 1280px;
+}
+
+.btn {
+    width: 100%;
+}
+
+.section {
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 320px) {
+
+}
+
+@media only screen and (min-width: 321px) {
+
+}
+
+@media only screen and (min-width: 821px) {
+
+}
