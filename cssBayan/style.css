@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Smokum&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Smokum', sans-serif;
+    font-size: 16px;
+}
+
+
+.container_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 1280px;
+}
+
+.block {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.content {
+    width: 50%;
+    display: none;
+    max-width: 50%;
+    max-height: 30rem;
+    animation: open 2s forwards;
+}
+
+.btn {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    border: 0;
+    border-bottom: 1px black solid;
+}
+
+.btn p{
+    width: 100%;
+    text-align: left;
+    color: #32a838;
+}
+
+.block:hover .icon.plus {
+    display:  none !important;
+}
+
+.block:hover .icon.xmark {
+    display: block;
+}
+
+.btn:hover p {
+    width: 98%;
+}
+input:checked ~ .icon.plus {
+    display: none !important;
+}
+
+input:checked ~ .icon.xmark {
+    display: block !important;
+}
+
+input:checked ~ .content {
+    display: block;
+}
+
+input:checked~.btn p {
+    color: crimson;
+}
+
+fieldset {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.block:hover .content {
+    display: block;   
+}
+
+@keyframes open {
+    from {
+        height: 0rem;
+    }
+
+    to {
+        height: 28.5rem;
+    }
+}
+
+
+
+.icon {
+    display: none;
+    width: 20px;
+    height: 20px;
+}
+
+h1 {
+    color: #32a838;
+}
+
+
+.container:hover *{
+    cursor: pointer;
+}
+
+.container:hover .icon.plus {
+    display: block;
+    color: crimson;
+}
+
+.container:hover p {
+    color: crimson;
+}
+
+
+@media screen and (max-width: 320px) {
+    .btn p, h1 {
+        font-size: 1rem;
+    }
+
+    .content {
+            max-height: 12rem;
+
+    }
+
+    @keyframes open {
+            from {
+                height: 0rem;
+            }
+    
+            to {
+                height: 12rem;
+            }
+    }
+
+}
+
+@media screen and (min-width: 321px ) and (max-width: 820px) {
+        .btn p, h1 {
+                font-size: 1.2rem;
+        }
+
+                        .content {
+                            max-height: 18rem;
+            
+                        }
+            
+                        @keyframes open {
+                            from {
+                                height: 0rem;
+                            }
+            
+                            to {
+                                height: 18rem;
+                            }
+                        }
+}
+
+@media  screen and (min-width: 820px) {
+        .btn p, h1 {
+                font-size: 1.5rem;
+        }
+
+}
